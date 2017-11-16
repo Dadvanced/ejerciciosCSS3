@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width">
+		<title>boton crema</title>
+	</head>
+	<style>
+		@keyframes rotar {
+			from {
+				-webkit-transform:rotate(0deg);
+			}
+
+			50% {
+				width: 50%;
+				height: 50%;
+			}
+
+			to {
+				-webkit-transform:rotate(360deg);
+				width: 80%;
+				height: 80%;
+			}
+		}
+
+
+		h1 {
+			text-align: center;
+		}
+
+		#boton {
+			position: absolute;
+			top: 125px;
+			left: 150px;
+			height: 100px; /* altura */
+			width: 100px;  /*ancho */
+			background-color: orange;			
+			-webkit-border-radius: 50px;
+			-webkit-box-shadow: 0px 0px 0px 5px #C7C7C7; /* ejeX ejeY difuminado, anchura, color */
+			text-align: center;
+			color: white;
+		}
+
+		#boton:hover {
+			background-color: #E44F19;
+			transition: 0.2s;
+			-webkit-border-radius: 50px;
+			-webkit-box-shadow: 0px 0px 0px 5px #ffffff , 2px 2px 1px 5px #888888;
+		}
+
+		#boton:hover #text1 {
+			opacity: 0;
+			transform: scale(0, 0);
+			transition: 0.8s;
+		}
+
+		#boton:hover #text2 {
+			opacity: 1;
+		}
+
+		#text1 {
+			position: absolute;
+			font-size: 1em;
+			transition: 0.3s;
+			opacity: 1;
+			left: 4px;
+		}
+
+		#text2 {
+			position: absolute;
+			opacity: 0;
+			top: 10px;
+			left: 16px;
+		}
+
+		#boton:hover #star{
+			animation-name: rotar;
+			animation-iteration-count: 1;
+			animation-duration: 1s;
+			animation-direction: alternate;
+		}
+
+		#star {
+			position: absolute;
+			transform-origin: 50% 50%;
+			left: 12px;
+			top: 5px;
+		}
+	</style>
+	
+	<body>
+		<h1>Práctica 6</h1>
+		<p>Botones con CSS3 Transitions y Animations</p>
+
+		<div id="boton">
+			<img id="star" src="star.png" width="80%" height="80%">
+			<span id="text1"><h2>Entra ahora</h2></span><span id="text2"><h2>Gratis</h2></span>
+		</div>
+	</body>
+</html>
